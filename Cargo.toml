@@ -7,17 +7,18 @@ resolver = "2"
 version = "0.1.0"
 edition = "2021"
 
-
 [workspace.dependencies]
 #Local
+async-std = "1.13.0"
 indexer_database = { path = "indexer_database" }
+migration = { path = "indexer_database/migration" }
+sea-orm-migration = "1.1.5"
 
 # Runtime
 tokio = { version = "1.43.0", features = ["full"] }
 
 # Error handling
 anyhow = "1.0.95"
-
 
 # Logging
 tracing = "0.1"
